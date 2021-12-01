@@ -1,7 +1,7 @@
 {
-  "name": "your_repository_name",
+  "name": "goit-react-hw-01-components",
   "version": "0.1.0",
-  "homepage": "https://your_github_name.github.io/your_repository_name/",
+  "homepage": "https://ryabik1983.github.io/goit-react-hw-01-components/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your_github_name/your_repository_name.git"
+    "url": "git+https://github.com/ryabik1983/goit-react-hw-01-components.git"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.11.0",
+    "eslint": "^7.32.0",
     "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
@@ -53,6 +53,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint --cache --fix",
-    "*.{js,css,scss,md}": "prettier --write"
+    "*.{js,css,scss,md}": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
