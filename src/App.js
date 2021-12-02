@@ -13,7 +13,6 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      ;
     </div>
   );
 }
