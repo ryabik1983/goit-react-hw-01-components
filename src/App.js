@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Profile from './components/Profile/Profile';
 import user from './user.json';
+import data from './data.json';
+import Statistics from './components/Statistics/Statistics';
 
 export default function App() {
   return (
@@ -13,6 +15,7 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
+      <Statistics title="Upload stats" stats={data} />
     </div>
   );
 }

@@ -1,35 +1,25 @@
 import PropTypes from 'prop-types';
+import styles from './Statistics.module.css';
+import StatisticItem from './StatisticItem';
 
-function Statistics({ title, stats }) {
+const Statistics = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>{title}</h2>}
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
+      <ul className={styles.statsList}>
+        {stats.map(item => StatisticItem({ item }))}
       </ul>
     </section>
   );
-}
-//   Profile.propTypes = {
-//     username: PropTypes.string.isRequired,
-//     tag: PropTypes.string.isRequired,
-//     location: PropTypes.string.isRequired,
-//     avatar: PropTypes.string.isRequired,
-//     stats: PropTypes.shape().isRequired,
-//   };
+};
+Statistics.defaultProps = {
+  title: 'Title',
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(PropTypes.shape({}).isRequired).isRequired,
+};
+
+export default Statistics;
